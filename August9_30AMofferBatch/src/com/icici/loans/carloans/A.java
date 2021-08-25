@@ -2,8 +2,6 @@ package com.icici.loans.carloans;
 
 public class A 
 {
-	private int x = 100;
-	
 	public void m1()
 	{
 		System.out.println("iam m1 from A");
@@ -13,7 +11,6 @@ public class A
 	{
 		A a = new A();
 		a.m1();
-		System.out.println(a.x);
 	}
 
 }
