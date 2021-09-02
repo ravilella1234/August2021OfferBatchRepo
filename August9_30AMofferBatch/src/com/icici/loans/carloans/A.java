@@ -3,6 +3,8 @@ package com.icici.loans.carloans;
 import java.io.File;
 import java.util.Date;
 
+import com.icici.loans.homeloans.C;
+
 public class A 
 {
 	public final int x=10;
@@ -43,6 +45,10 @@ public class A
 		A a = new A();
 		a.m1();
 		m5();
+		
+		A obj;
+		obj = new B();
+		obj = new C();
 	}
 
 }
