@@ -2,9 +2,9 @@ package com.icici.loans.homeloans;
 
 class Parent
 {
-	public Number workhard()
+	public strictfp Number workhard()
 	{
-		System.out.println("Parent : wake-up early, goto college");
+		System.out.println("Parent : wakeup early,goto college");
 		return 0;
 	}
 	
@@ -16,23 +16,23 @@ class Parent
 
 public class Child extends Parent
 {
-	public Integer workhard()
+	public  Object workhard()
 	{
-		System.out.println("Child : wake-up any-Time, goto movies");
+		System.out.println("Child : wakeup anytime,goto movies");
 		return 0;
 	}
 	
 	public void love()
 	{
-		System.out.println("Child : iam in love");
+		System.out.println("Child : iam in love...");
 	}
 	
 	public static void main(String[] args) 
 	{
-		 Child c = new Child();
-		 c.workhard();
-		 c.care();
-		 c.love();
+		Child obj = new Child();
+		obj.workhard();
+		obj.care();
+		obj.love();
 	}
 
 }
