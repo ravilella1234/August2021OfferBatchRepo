@@ -11,10 +11,6 @@ public class EmployeeChild extends Employee
 		System.out.println(this.city);
 	}
 	
-	void m1()
-	{
-		
-	}
 	
 	public static void main(String[] args)
 	{
