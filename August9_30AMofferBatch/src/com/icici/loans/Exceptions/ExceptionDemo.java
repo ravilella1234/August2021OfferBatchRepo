@@ -1,6 +1,5 @@
 package com.icici.loans.Exceptions;
 
-import java.util.NoSuchElementException;
 import java.util.Scanner;
 
 public class ExceptionDemo 
@@ -26,7 +25,11 @@ public class ExceptionDemo
 			catch(Exception e) 
 			{
 				e.printStackTrace();
-			}			
+			}	
+			finally 
+			{
+				System.out.println("iam final...");
+			}
 		}
 	}
 
