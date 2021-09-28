@@ -6,6 +6,9 @@ import java.util.Properties;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.firefox.FirefoxProfile;
+import org.openqa.selenium.firefox.ProfilesIni;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
@@ -47,7 +50,29 @@ public class BaseTest
 		else if(p.getProperty(browser).equals("firefox"))
 		{
 			 WebDriverManager.firefoxdriver().setup();
-			 driver = new FirefoxDriver();
+			 
+			 ProfilesIni p = new ProfilesIni();
+			 FirefoxProfile profile = p.getProfile("septemberofferprofile");
+			 
+			 FirefoxOptions option = new FirefoxOptions();
+			 option.setProfile(profile);
+			 
+			 //Notifications
+			 profile.setPreference("dom.webnotifications.enabled", false);
+			 
+			 //Setting the Firefox Binaries path 
+			// option.setBinary("C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe");
+			 
+			 //certificate errors
+			 profile.setAcceptUntrustedCertificates(true);
+			 profile.setAssumeUntrustedCertificateIssuer(false);
+			 
+			 //How to work with proxy settings // about:config
+			// profile.setPreference("network.proxy.type", 1);
+			// profile.setPreference("network.proxy.socks", "192.168.10.1"); //here i have gave dummy port number 
+			// profile.setPreference("network.proxy.socks_port", 1744);
+			 
+			 driver = new FirefoxDriver(option);
 		}
 	}
 	
