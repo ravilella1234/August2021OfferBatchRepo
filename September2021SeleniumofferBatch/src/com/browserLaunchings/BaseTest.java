@@ -3,8 +3,10 @@ package com.browserLaunchings;
 import java.io.FileInputStream;
 import java.util.Properties;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.firefox.FirefoxProfile;
@@ -45,7 +47,14 @@ public class BaseTest
 		if(p.getProperty(browser).equals("chrome"))
 		{
 			 WebDriverManager.chromedriver().setup();
-			 driver = new ChromeDriver();
+			 
+			 ChromeOptions option = new ChromeOptions();
+			 option.addArguments("user-data-dir=C:\\Users\\ravi\\AppData\\Local\\Google\\Chrome\\User Data\\Profile 4");
+			 option.addArguments("--disable-notifications");
+			 option.addArguments("--start-maximized");
+			// option.addArguments("--ignore-certificate-errors-spki-list");
+			// option.addArguments("--proxy-server=http://192.168.10.1:9090");
+			 driver = new ChromeDriver(option);
 		}
 		else if(p.getProperty(browser).equals("firefox"))
 		{
@@ -80,6 +89,21 @@ public class BaseTest
 	{
 		//driver.get(childProp.getProperty(url));
 		driver.navigate().to(childProp.getProperty(url));
+	}
+	
+	public static void elementClick(String locator) 
+	{
+		driver.findElement(By.xpath(locator)).click();
+	}
+
+	public static void typeText(String locator, String text) 
+	{
+		driver.findElement(By.name(locator)).sendKeys(text);		
+	}
+
+	public static void selectOption(String locator, String option) 
+	{
+		driver.findElement(By.id(locator)).sendKeys(option);
 	}
 
 }
