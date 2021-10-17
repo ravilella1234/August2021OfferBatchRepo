@@ -41,27 +41,27 @@ public class BaseTest
 	
 	public static void init() throws Exception
 	{
-	    fis = new FileInputStream(projectPath+"\\src\\test\\resources\\data.properties");
+	    fis = new FileInputStream(projectPath+"\\data.properties");
 		p = new Properties();
 		p.load(fis);
 		
-		fis = new FileInputStream(projectPath+"\\src\\test\\resources\\environment.properties");
+		fis = new FileInputStream(projectPath+"\\environment.properties");
 		mainProp = new Properties();
 		mainProp.load(fis);
 		String e = mainProp.getProperty("env");
 		System.out.println(e);
 		
-		fis = new FileInputStream(projectPath+"\\src\\test\\resources\\"+e+".properties");
+		fis = new FileInputStream(projectPath+"\\"+e+".properties");
 		childProp = new Properties();
 		childProp.load(fis);
 		String value = childProp.getProperty("amazonurl");
 		System.out.println(value);
 		
-		fis = new FileInputStream(projectPath+"\\src\\test\\resources\\or.properties");
+		fis = new FileInputStream(projectPath+"\\or.properties");
 		orProp = new Properties();
 		orProp.load(fis);
 		
-		fis = new FileInputStream(projectPath+"\\src\\test\\resources\\log4jconfig.properties");
+		fis = new FileInputStream(projectPath+"\\log4jconfig.properties");
 		PropertyConfigurator.configure(fis);
 		
 		report = ExtentManager.getInstance();
@@ -69,7 +69,7 @@ public class BaseTest
 	
 	public static void launch(String browser)
 	{
-		if(p.getProperty(browser).equals("chrome"))
+		if(browser.equals("chrome"))
 		{
 			 WebDriverManager.chromedriver().setup();
 			 
@@ -81,7 +81,7 @@ public class BaseTest
 			// option.addArguments("--proxy-server=http://192.168.10.1:9090");
 			 driver = new ChromeDriver(option);
 		}
-		else if(p.getProperty(browser).equals("firefox"))
+		else if(browser.equals("firefox"))
 		{
 			 WebDriverManager.firefoxdriver().setup();
 			 

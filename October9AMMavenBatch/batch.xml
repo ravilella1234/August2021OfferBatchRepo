@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="FunctionalSuite" parallel="tests">
+
+  <test  name="chrometest">
+  <parameter name="browser" value="chrome"></parameter>
+    <classes>
+      <class name="com.project.TNG_003"/>
+      <class name="com.project.LinksTesting1"/>
+      <class name="com.project.RadioButton1"/>
+      <class name="com.project.CheckBox1"/>
+    </classes>
+  </test> <!-- FunctionalTest -->
+  
+  
+  <test  name="firefoxtext">
+  <parameter name="browser" value="firefox"></parameter>
+    <classes>
+      <class name="com.project.TNG_003"/>
+      <class name="com.project.LinksTesting1"/>
+      <class name="com.project.RadioButton1"/>
+      <class name="com.project.CheckBox1"/>
+    </classes>
+  </test> <!-- FunctionalTest -->
+  
+  
+</suite> <!-- FunctionalSuite -->
