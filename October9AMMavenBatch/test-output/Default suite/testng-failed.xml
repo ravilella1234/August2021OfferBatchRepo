@@ -3,13 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.project.CheckBox1">
+      <class name="com.project.TestDependency">
         <methods>
-          <include name="afterMethod"/>
-          <include name="checkboxTest"/>
-          <include name="beforeMethod"/>
+          <include name="blue"/>
+          <include name="green"/>
+          <include name="white"/>
+          <include name="orange"/>
         </methods>
-      </class> <!-- com.project.CheckBox1 -->
+      </class> <!-- com.project.TestDependency -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
