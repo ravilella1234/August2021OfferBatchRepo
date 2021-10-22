@@ -1,16 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.project.TestDependency">
+      <class name="excelDataDrivens.DataManagementwithDataprovider">
         <methods>
-          <include name="blue"/>
-          <include name="green"/>
-          <include name="white"/>
-          <include name="orange"/>
+          <include name="f"/>
         </methods>
-      </class> <!-- com.project.TestDependency -->
+      </class> <!-- excelDataDrivens.DataManagementwithDataprovider -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -1,20 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
-  <listeners>
-    <listener class-name="testnglistners.TestListners"/>
-    <listener class-name="testnglistners.RetryListener"/>
-  </listeners>
-  <test thread-count="5" name="Test(failed)">
-    <parameter name="browser" value="chrome"/>
+<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.project.TNG_003">
+      <class name="excelDataDrivens.DataManagementwithDataprovider">
         <methods>
-          <include name="beforeMethod"/>
-          <include name="afterMethod"/>
           <include name="f"/>
         </methods>
-      </class> <!-- com.project.TNG_003 -->
+      </class> <!-- excelDataDrivens.DataManagementwithDataprovider -->
     </classes>
-  </test> <!-- Test(failed) -->
-</suite> <!-- Failed suite [Suite] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->
