@@ -3,11 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="excelDataDrivens.DataManagementwithDataprovider">
+      <class name="excelDataDrivens.FacebookDemoByUsingDataProvider">
         <methods>
-          <include name="f"/>
+          <include name="startup"/>
+          <include name="fbTest" invocation-numbers="1"/>
         </methods>
-      </class> <!-- excelDataDrivens.DataManagementwithDataprovider -->
+      </class> <!-- excelDataDrivens.FacebookDemoByUsingDataProvider -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

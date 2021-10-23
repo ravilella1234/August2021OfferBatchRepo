@@ -1,91 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-10-22T04:48:56Z" name="Default suite" finished-at="2021-10-22T04:48:58Z" duration-ms="2185">
+  <suite started-at="2021-10-23T04:32:26Z" name="Default suite" finished-at="2021-10-23T04:32:45Z" duration-ms="18433">
     <groups>
     </groups>
-    <test started-at="2021-10-22T04:48:56Z" name="Default test" finished-at="2021-10-22T04:48:58Z" duration-ms="2185">
-      <class name="excelDataDrivens.DataManagementwithDataprovider">
-        <test-method signature="f(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:excelDataDrivens.DataManagementwithDataprovider@6ee4d9ab]" started-at="2021-10-22T04:48:58Z" name="f" data-provider="getData" finished-at="2021-10-22T04:48:58Z" duration-ms="38" status="PASS">
+    <test started-at="2021-10-23T04:32:26Z" name="Default test" finished-at="2021-10-23T04:32:45Z" duration-ms="18433">
+      <class name="excelDataDrivens.FacebookDemoByUsingDataProvider">
+        <test-method is-config="true" signature="startup()[pri:0, instance:excelDataDrivens.FacebookDemoByUsingDataProvider@4f6f416f]" started-at="2021-10-23T04:32:30Z" name="startup" finished-at="2021-10-23T04:32:39Z" duration-ms="8949" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startup -->
+        <test-method signature="fbTest(java.util.Hashtable)[pri:0, instance:excelDataDrivens.FacebookDemoByUsingDataProvider@4f6f416f]" started-at="2021-10-23T04:32:39Z" name="fbTest" data-provider="getData" finished-at="2021-10-23T04:32:39Z" duration-ms="809" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[N]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[dummy1]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[dummy2]]>
+                <![CDATA[{ExpectedResult=LoginSuccuss, RunMode=Y, UserPassword=ravi2021, UserName=ravilella.2015@gmail.com, Browser=chrome}]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- f -->
-        <test-method signature="f(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:excelDataDrivens.DataManagementwithDataprovider@6ee4d9ab]" started-at="2021-10-22T04:48:58Z" name="f" data-provider="getData" finished-at="2021-10-22T04:48:58Z" duration-ms="31" status="PASS">
+        </test-method> <!-- fbTest -->
+        <test-method is-config="true" signature="startup()[pri:0, instance:excelDataDrivens.FacebookDemoByUsingDataProvider@4f6f416f]" started-at="2021-10-23T04:32:39Z" name="startup" finished-at="2021-10-23T04:32:45Z" duration-ms="5414" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startup -->
+        <test-method signature="fbTest(java.util.Hashtable)[pri:0, instance:excelDataDrivens.FacebookDemoByUsingDataProvider@4f6f416f]" started-at="2021-10-23T04:32:45Z" name="fbTest" data-provider="getData" finished-at="2021-10-23T04:32:45Z" duration-ms="3" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[N]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[firefox]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[dummy3]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[dummy4]]>
+                <![CDATA[{ExpectedResult=LoginSuccuss, RunMode=N, UserPassword=password2, UserName=user2, Browser=firefox}]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- f -->
-        <test-method signature="f(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:excelDataDrivens.DataManagementwithDataprovider@6ee4d9ab]" started-at="2021-10-22T04:48:58Z" name="f" data-provider="getData" finished-at="2021-10-22T04:48:58Z" duration-ms="6" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[N]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[firefox]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[dummy5]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[dummy6]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- f -->
-      </class> <!-- excelDataDrivens.DataManagementwithDataprovider -->
+        </test-method> <!-- fbTest -->
+      </class> <!-- excelDataDrivens.FacebookDemoByUsingDataProvider -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
