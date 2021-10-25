@@ -1,43 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-10-23T04:32:26Z" name="Default suite" finished-at="2021-10-23T04:32:45Z" duration-ms="18433">
+  <suite started-at="2021-10-25T04:37:25Z" name="Default suite" finished-at="2021-10-25T04:37:47Z" duration-ms="22626">
     <groups>
     </groups>
-    <test started-at="2021-10-23T04:32:26Z" name="Default test" finished-at="2021-10-23T04:32:45Z" duration-ms="18433">
-      <class name="excelDataDrivens.FacebookDemoByUsingDataProvider">
-        <test-method is-config="true" signature="startup()[pri:0, instance:excelDataDrivens.FacebookDemoByUsingDataProvider@4f6f416f]" started-at="2021-10-23T04:32:30Z" name="startup" finished-at="2021-10-23T04:32:39Z" duration-ms="8949" status="PASS">
+    <test started-at="2021-10-25T04:37:25Z" name="Default test" finished-at="2021-10-25T04:37:47Z" duration-ms="22626">
+      <class name="pageobjectModel.POM_001">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:pageobjectModel.POM_001@176b75f7]" started-at="2021-10-25T04:37:25Z" name="beforeMethod" finished-at="2021-10-25T04:37:38Z" duration-ms="12883" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- startup -->
-        <test-method signature="fbTest(java.util.Hashtable)[pri:0, instance:excelDataDrivens.FacebookDemoByUsingDataProvider@4f6f416f]" started-at="2021-10-23T04:32:39Z" name="fbTest" data-provider="getData" finished-at="2021-10-23T04:32:39Z" duration-ms="809" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{ExpectedResult=LoginSuccuss, RunMode=Y, UserPassword=ravi2021, UserName=ravilella.2015@gmail.com, Browser=chrome}]]>
-              </value>
-            </param>
-          </params>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="f()[pri:0, instance:pageobjectModel.POM_001@176b75f7]" started-at="2021-10-25T04:37:38Z" name="f" finished-at="2021-10-25T04:37:47Z" duration-ms="9640" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- fbTest -->
-        <test-method is-config="true" signature="startup()[pri:0, instance:excelDataDrivens.FacebookDemoByUsingDataProvider@4f6f416f]" started-at="2021-10-23T04:32:39Z" name="startup" finished-at="2021-10-23T04:32:45Z" duration-ms="5414" status="PASS">
+        </test-method> <!-- f -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:pageobjectModel.POM_001@176b75f7]" started-at="2021-10-25T04:37:47Z" name="afterMethod" finished-at="2021-10-25T04:37:47Z" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- startup -->
-        <test-method signature="fbTest(java.util.Hashtable)[pri:0, instance:excelDataDrivens.FacebookDemoByUsingDataProvider@4f6f416f]" started-at="2021-10-23T04:32:45Z" name="fbTest" data-provider="getData" finished-at="2021-10-23T04:32:45Z" duration-ms="3" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{ExpectedResult=LoginSuccuss, RunMode=N, UserPassword=password2, UserName=user2, Browser=firefox}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- fbTest -->
-      </class> <!-- excelDataDrivens.FacebookDemoByUsingDataProvider -->
+        </test-method> <!-- afterMethod -->
+      </class> <!-- pageobjectModel.POM_001 -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
