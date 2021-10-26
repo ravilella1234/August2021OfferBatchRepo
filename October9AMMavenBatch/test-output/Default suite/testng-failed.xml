@@ -7,7 +7,7 @@
         <methods>
           <include name="afterMethod"/>
           <include name="beforeMethod"/>
-          <include name="f"/>
+          <include name="customerReg"/>
         </methods>
       </class> <!-- pageobjectModel.POM_001 -->
     </classes>

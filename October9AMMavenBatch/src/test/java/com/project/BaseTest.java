@@ -4,6 +4,8 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.util.Date;
 import java.util.Properties;
+import java.util.Random;
+import java.util.concurrent.TimeUnit;
 
 import org.apache.log4j.PropertyConfigurator;
 import org.openqa.selenium.By;
@@ -114,6 +116,7 @@ public class BaseTest
 			// profile.setPreference("network.proxy.socks_port", 1744);
 			 
 			 driver = new FirefoxDriver(option);
+			// driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 		}
 	}
 	
@@ -121,6 +124,7 @@ public class BaseTest
 	{
 		//driver.get(childProp.getProperty(url));
 		driver.navigate().to(childProp.getProperty(url));
+		
 	}
 	
 	public static void elementClick(String locatorKey) 
@@ -262,6 +266,24 @@ public class BaseTest
 		FileHandler.copy(scrFile, new File(projectPath+"//failurescreenshots//"+dateFormat));
 		
 		test.log(Status.INFO, "Screenshot --->" +test.addScreenCaptureFromPath(projectPath+"//failurescreenshots//"+dateFormat));
+	}
+	
+	public void waitforElement(WebElement locator, int timeOutInSeconds,String typeOfAction) 
+	{
+			WebDriverWait wait = new WebDriverWait(driver, timeOutInSeconds);
+			if(typeOfAction.equals("elementClickable")) {
+				wait.until(ExpectedConditions.elementToBeClickable(locator));
+			}else if(typeOfAction.equals("elementVisible")) {
+				wait.until(ExpectedConditions.visibilityOf(locator));
+			}
+				
+	}
+	
+	public int randomNum() 
+	{
+		Random r = new Random();
+		int ran = r.nextInt(99999);
+		return ran;
 	}
 
 }
