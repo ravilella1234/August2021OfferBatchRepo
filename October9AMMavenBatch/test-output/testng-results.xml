@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="1" total="2" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-10-26T04:56:34Z" name="Default suite" finished-at="2021-10-26T04:57:26Z" duration-ms="51781">
+  <suite started-at="2021-11-02T04:19:09Z" name="Default suite" finished-at="2021-11-02T04:19:24Z" duration-ms="15013">
     <groups>
     </groups>
-    <test started-at="2021-10-26T04:56:34Z" name="Default test" finished-at="2021-10-26T04:57:26Z" duration-ms="51781">
-      <class name="pageobjectModel.POM_001">
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:pageobjectModel.POM_001@6f19ac19]" started-at="2021-10-26T04:56:34Z" name="beforeMethod" finished-at="2021-10-26T04:56:55Z" duration-ms="20827" status="PASS">
+    <test started-at="2021-11-02T04:19:09Z" name="Default test" finished-at="2021-11-02T04:19:24Z" duration-ms="15013">
+      <class name="switches.AlertHandling">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:switches.AlertHandling@68dc098b]" started-at="2021-11-02T04:19:09Z" name="beforeMethod" finished-at="2021-11-02T04:19:19Z" duration-ms="9544" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="customerReg()[pri:0, instance:pageobjectModel.POM_001@6f19ac19]" started-at="2021-10-26T04:56:55Z" name="customerReg" finished-at="2021-10-26T04:57:26Z" duration-ms="30881" status="PASS">
+        <test-method signature="f()[pri:0, instance:switches.AlertHandling@68dc098b]" started-at="2021-11-02T04:19:19Z" name="f" finished-at="2021-11-02T04:19:24Z" duration-ms="5374" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- customerReg -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:pageobjectModel.POM_001@6f19ac19]" started-at="2021-10-26T04:57:26Z" name="afterMethod" finished-at="2021-10-26T04:57:26Z" duration-ms="0" status="PASS">
+        </test-method> <!-- f -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:switches.AlertHandling@68dc098b]" started-at="2021-11-02T04:19:24Z" name="afterMethod" finished-at="2021-11-02T04:19:24Z" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-      </class> <!-- pageobjectModel.POM_001 -->
+      </class> <!-- switches.AlertHandling -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
