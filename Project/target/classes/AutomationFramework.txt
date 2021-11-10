@@ -30,4 +30,18 @@ Why Automation Framework is Required ?
      - validateText
      - validateElementPresent
      - validateElementVisible
+     
+     
+-------------------------------------------------------------     
+rediffurl=https://portfolio.rediff.com/portfolio-login
+   
+Create Portfolio Test - Login, Create portfolio, Verify the Created portfolio , Logout
+Delete portfolio Test - Login, Select Portfolio, Delete Portfolio,  Verify the Deleted Portfolio, Logout
+
+Add New Stocks - Login, Select the Portfolio, Add the Stocks, Verify Quantity, Verify avg price, Verify Transaction History, Logout
+Modify Stocks  - Login, Select the Portfolio, Buy the stocks, verify quantity, Verify avg price, Verify Transaction History, Logout
+     
+     
+     
+     
 
