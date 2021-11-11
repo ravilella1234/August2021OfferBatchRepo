@@ -1,6 +1,8 @@
 package keywords;
 
-public class GenericKeywords 
+import org.openqa.selenium.WebElement;
+
+public class GenericKeywords  extends ValidationKeywords
 {
 	
 	public void openBrowser(String browserName)
@@ -32,6 +34,12 @@ public class GenericKeywords
     {
     	
 		return locator;
+    }
+    
+    public WebElement getLocator(String locator)
+    {
+    	
+		return null;
     }
     
 

@@ -2,7 +2,7 @@ package suites;
 
 import org.testng.annotations.Test;
 
-public class StocksManagement
+public class StocksManagement extends BaseTest
 {
   @Test
   public void addNewStock() 
