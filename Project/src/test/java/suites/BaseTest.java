@@ -12,7 +12,7 @@ public class BaseTest
 	public ApplicationKeywords app ;
 	
 	@BeforeTest
-	public void startTest(ITestContext context)
+	public void startTest(ITestContext context) throws Exception
 	{
 		System.out.println("-----------  Before Test  ---------");
 		

@@ -1,33 +1,99 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="4" total="8" passed="4" failed="0" skipped="0">
+<testng-results ignored="6" total="10" passed="4" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-11-10T04:39:10Z" name="PortfilioSuite" finished-at="2021-11-10T04:39:10Z" duration-ms="454">
+  <suite started-at="2021-11-18T04:05:32Z" name="PortfilioSuite" finished-at="2021-11-18T04:05:32Z" duration-ms="660">
     <groups>
     </groups>
-    <test started-at="2021-11-10T04:39:10Z" name="Create Portfolio Test" finished-at="2021-11-10T04:39:10Z" duration-ms="165">
+    <test started-at="2021-11-18T04:05:32Z" name="Create Portfolio Test" finished-at="2021-11-18T04:05:32Z" duration-ms="151">
       <class name="suites.Sessions">
-        <test-method signature="login()[pri:0, instance:suites.Sessions@1649b0e6]" started-at="2021-11-10T04:39:10Z" name="login" finished-at="2021-11-10T04:39:10Z" duration-ms="26" status="PASS">
+        <test-method is-config="true" signature="startTest(org.testng.ITestContext)[pri:0, instance:suites.Sessions@68c72235]" started-at="2021-11-18T04:05:32Z" name="startTest" finished-at="2021-11-18T04:05:32Z" duration-ms="53" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@710636b0]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startTest -->
+        <test-method is-config="true" signature="startMethod(org.testng.ITestContext)[pri:0, instance:suites.Sessions@68c72235]" started-at="2021-11-18T04:05:32Z" name="startMethod" finished-at="2021-11-18T04:05:32Z" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@710636b0]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startMethod -->
+        <test-method signature="login()[pri:0, instance:suites.Sessions@68c72235]" started-at="2021-11-18T04:05:32Z" name="login" finished-at="2021-11-18T04:05:32Z" duration-ms="25" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
       </class> <!-- suites.Sessions -->
       <class name="suites.PortfolioManagement">
-        <test-method signature="createPortfolio()[pri:0, instance:suites.PortfolioManagement@865dd6]" started-at="2021-11-10T04:39:10Z" name="createPortfolio" finished-at="2021-11-10T04:39:10Z" duration-ms="3" status="PASS">
+        <test-method is-config="true" signature="startMethod(org.testng.ITestContext)[pri:0, instance:suites.PortfolioManagement@3a6bb9bf]" started-at="2021-11-18T04:05:32Z" name="startMethod" finished-at="2021-11-18T04:05:32Z" duration-ms="3" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@710636b0]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startMethod -->
+        <test-method signature="createPortfolio()[pri:0, instance:suites.PortfolioManagement@3a6bb9bf]" started-at="2021-11-18T04:05:32Z" name="createPortfolio" finished-at="2021-11-18T04:05:32Z" duration-ms="7" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createPortfolio -->
       </class> <!-- suites.PortfolioManagement -->
     </test> <!-- Create Portfolio Test -->
-    <test started-at="2021-11-10T04:39:10Z" name="Delete Portfolio Test" finished-at="2021-11-10T04:39:10Z" duration-ms="31">
+    <test started-at="2021-11-18T04:05:32Z" name="Delete Portfolio Test" finished-at="2021-11-18T04:05:32Z" duration-ms="92">
       <class name="suites.Sessions">
-        <test-method signature="login()[pri:0, instance:suites.Sessions@2bfc268b]" started-at="2021-11-10T04:39:10Z" name="login" finished-at="2021-11-10T04:39:10Z" duration-ms="8" status="PASS">
+        <test-method is-config="true" signature="startTest(org.testng.ITestContext)[pri:0, instance:suites.Sessions@27ff5d15]" started-at="2021-11-18T04:05:32Z" name="startTest" finished-at="2021-11-18T04:05:32Z" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@3de8f619]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startTest -->
+        <test-method is-config="true" signature="startMethod(org.testng.ITestContext)[pri:0, instance:suites.Sessions@27ff5d15]" started-at="2021-11-18T04:05:32Z" name="startMethod" finished-at="2021-11-18T04:05:32Z" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@3de8f619]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startMethod -->
+        <test-method signature="login()[pri:0, instance:suites.Sessions@27ff5d15]" started-at="2021-11-18T04:05:32Z" name="login" finished-at="2021-11-18T04:05:32Z" duration-ms="3" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
       </class> <!-- suites.Sessions -->
       <class name="suites.PortfolioManagement">
-        <test-method signature="deletePortfolio()[pri:0, instance:suites.PortfolioManagement@2f8dad04]" started-at="2021-11-10T04:39:10Z" name="deletePortfolio" finished-at="2021-11-10T04:39:10Z" duration-ms="4" status="PASS">
+        <test-method is-config="true" signature="startMethod(org.testng.ITestContext)[pri:0, instance:suites.PortfolioManagement@4e096385]" started-at="2021-11-18T04:05:32Z" name="startMethod" finished-at="2021-11-18T04:05:32Z" duration-ms="6" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@3de8f619]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startMethod -->
+        <test-method signature="deletePortfolio()[pri:0, instance:suites.PortfolioManagement@4e096385]" started-at="2021-11-18T04:05:32Z" name="deletePortfolio" finished-at="2021-11-18T04:05:32Z" duration-ms="38" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- deletePortfolio -->
