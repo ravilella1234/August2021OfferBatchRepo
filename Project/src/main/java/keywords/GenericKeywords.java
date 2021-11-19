@@ -19,7 +19,7 @@ public class GenericKeywords  extends ValidationKeywords
 	Properties mainProp;
 	Properties childProp;
 	Properties orProp;
-	public String projectPath = System.getProperty("user.dir");
+	public static String projectPath = System.getProperty("user.dir");
 	
 	
 	public void openBrowser(String browserName)
