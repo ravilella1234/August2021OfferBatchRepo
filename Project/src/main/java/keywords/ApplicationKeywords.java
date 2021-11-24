@@ -4,7 +4,10 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.util.Properties;
 
-public class ApplicationKeywords  extends GenericKeywords
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.Status;
+
+public class ApplicationKeywords  extends ValidationKeywords
 {
 	
 
@@ -13,6 +16,7 @@ public class ApplicationKeywords  extends GenericKeywords
 		
 		mainProp = new Properties();
 		childProp = new Properties();
+		orProp = new Properties();
 		
 		try 
 		{
@@ -24,6 +28,9 @@ public class ApplicationKeywords  extends GenericKeywords
 			fis = new FileInputStream(projectPath+"\\src\\test\\resources\\"+e+".properties");
 			childProp.load(fis);
 			System.out.println(childProp.getProperty("rediffurl"));
+			
+			fis = new FileInputStream(projectPath+"\\src\\test\\resources\\or.properties");
+			orProp.load(fis);
 		} 
 		catch (FileNotFoundException e) 
 		{
@@ -34,12 +41,17 @@ public class ApplicationKeywords  extends GenericKeywords
 
 	public void login()
 	{
-		
+		test.log(Status.INFO, "login");
 	}
 	
     public void selectDateFromCalander()
     {
     	
+    }
+    
+    public void setReport(ExtentTest test)
+    {
+    	this.test=test;
     }
 
 }

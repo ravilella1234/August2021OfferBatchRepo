@@ -11,20 +11,25 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.Status;
+
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class GenericKeywords  extends ValidationKeywords
+public class GenericKeywords
 {
 	public WebDriver driver;
 	Properties mainProp;
 	Properties childProp;
 	Properties orProp;
 	public static String projectPath = System.getProperty("user.dir");
-	
+	public ExtentTest test;
 	
 	public void openBrowser(String browserName)
 	{
 		System.out.println("Opening the Browser : "+ browserName);
+		//test.log(Status.INFO, "Opening the Browser : "+ browserName);
+		log("Opening the Browser : "+ browserName);
 		
 		if(browserName.equals("chrome")) {
 			WebDriverManager.chromedriver().setup();
@@ -39,19 +44,26 @@ public class GenericKeywords  extends ValidationKeywords
     public void navigate(String url)
     {
     	System.out.println("Navite to :- "+ url);
+    	//test.log(Status.INFO, "Navite to :- "+ url);
+    	log("Navite to :- "+ url);
     	driver.get(childProp.getProperty(url));
+    	
     }
     
     public void click(String locatorKey)
     {
     	System.out.println("Clicking on : " + locatorKey );
+    	//test.log(Status.INFO, "Clicking on : " + orProp.getProperty(locatorKey) );
+    	log("Clicking on : " + orProp.getProperty(locatorKey));
     	getElement(locatorKey).click();
     }
     
     public void type(String locatorKey, String text)
     {
     	System.out.println("Typing Text : " + locatorKey +"Data : "+text);
-    	getElement(locatorKey).sendKeys(text);
+    	//test.log(Status.INFO, "Typing Text : " + childProp.getProperty(text) +"with locator : "+orProp.getProperty(locatorKey));
+    	log("Typing Text : " + childProp.getProperty(text) +"with locator : "+orProp.getProperty(locatorKey));
+    	getElement(locatorKey).sendKeys(childProp.getProperty(text));
     }
     
     public void select(String locatorKey, String option)
@@ -119,5 +131,11 @@ public class GenericKeywords  extends ValidationKeywords
 		return by;
 	}
     
+	
+	//reporting function
+	public void log(String msg)
+	{
+		test.log(Status.INFO, msg);
+	}
 
 }

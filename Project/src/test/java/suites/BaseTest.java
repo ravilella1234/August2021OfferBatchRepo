@@ -32,6 +32,8 @@ public class BaseTest
 		test = rep.createTest(context.getCurrentXmlTest().getName());
 		test.log(Status.INFO, "Starting test :" + context.getCurrentXmlTest().getName());
 		
+		app.setReport(test);
+		
 		context.setAttribute("report", rep);
 		context.setAttribute("test", test);
 	}

@@ -11,6 +11,10 @@ public class Sessions extends BaseTest
   {
 	  System.out.println("Do Login");  
 	  test.log(Status.INFO, "Do Login");
+	  app.openBrowser("chrome");
+	  app.navigate("rediffurl");
+	  app.type("userid_id", "rediffuser");
+	  app.type("userpassword_id", "rediffpassword");
 	 
   }
   
@@ -18,7 +22,8 @@ public class Sessions extends BaseTest
   public void logout() 
   {
 	  System.out.println("Do Logout");
-	  test.log(Status.INFO, "Do Logout");
+	  //test.log(Status.INFO, "Do Logout");
+	 
 	 
   }
   
