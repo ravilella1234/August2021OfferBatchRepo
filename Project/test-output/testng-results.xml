@@ -1,29 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+<testng-results ignored="8" total="12" passed="2" failed="2" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-11-25T04:27:46Z" name="Default suite" finished-at="2021-11-25T04:28:04Z" duration-ms="18026">
+  <suite started-at="2021-12-01T04:38:44Z" name="PortfilioSuite" finished-at="2021-12-01T04:39:03Z" duration-ms="19686">
     <groups>
     </groups>
-    <test started-at="2021-11-25T04:27:46Z" name="Default test" finished-at="2021-11-25T04:28:04Z" duration-ms="18026">
-      <class name="suites.AssertsDemo">
-        <test-method signature="f()[pri:0, instance:suites.AssertsDemo@3315d2d7]" started-at="2021-11-25T04:27:46Z" name="f" finished-at="2021-11-25T04:28:04Z" duration-ms="17937" status="FAIL">
+    <test started-at="2021-12-01T04:38:44Z" name="Create Portfolio Test" finished-at="2021-12-01T04:38:57Z" duration-ms="12889">
+      <class name="suites.Sessions">
+        <test-method is-config="true" signature="startTest(org.testng.ITestContext)[pri:0, instance:suites.Sessions@11bd0f3b]" started-at="2021-12-01T04:38:44Z" name="startTest" finished-at="2021-12-01T04:38:45Z" duration-ms="815" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@72eb6200]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startTest -->
+        <test-method is-config="true" signature="startMethod(org.testng.ITestContext)[pri:0, instance:suites.Sessions@11bd0f3b]" started-at="2021-12-01T04:38:45Z" name="startMethod" finished-at="2021-12-01T04:38:45Z" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@72eb6200]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startMethod -->
+        <test-method signature="login()[pri:0, instance:suites.Sessions@11bd0f3b]" started-at="2021-12-01T04:38:45Z" name="login" finished-at="2021-12-01T04:38:55Z" duration-ms="10547" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[The following asserts failed:
-Both titles are not equal... expected [true] but found [false],
-err1 expected [true] but found [false],
-err2 expected [true] but found [false],
-err4 expected [true] but found [false]]]>
+title not mached]]>
             </message>
             <full-stacktrace>
               <![CDATA[java.lang.AssertionError: The following asserts failed:
-Both titles are not equal... expected [true] but found [false],
-err1 expected [true] but found [false],
-err2 expected [true] but found [false],
-err4 expected [true] but found [false]
+title not mached
 at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:43)
-at suites.AssertsDemo.f(AssertsDemo.java:43)
+at keywords.GenericKeywords.assertAll(GenericKeywords.java:175)
+at suites.Sessions.login(Sessions.java:21)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -54,8 +71,119 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- f -->
-      </class> <!-- suites.AssertsDemo -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        </test-method> <!-- login -->
+        <test-method is-config="true" signature="quit()[pri:0, instance:suites.Sessions@11bd0f3b]" started-at="2021-12-01T04:38:55Z" name="quit" finished-at="2021-12-01T04:38:57Z" duration-ms="1452" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quit -->
+      </class> <!-- suites.Sessions -->
+      <class name="suites.PortfolioManagement">
+        <test-method is-config="true" signature="startMethod(org.testng.ITestContext)[pri:0, instance:suites.PortfolioManagement@79da8dc5]" started-at="2021-12-01T04:38:55Z" name="startMethod" finished-at="2021-12-01T04:38:55Z" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@72eb6200]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startMethod -->
+        <test-method signature="createPortfolio()[pri:0, instance:suites.PortfolioManagement@79da8dc5]" started-at="2021-12-01T04:38:55Z" name="createPortfolio" finished-at="2021-12-01T04:38:55Z" duration-ms="5" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createPortfolio -->
+      </class> <!-- suites.PortfolioManagement -->
+    </test> <!-- Create Portfolio Test -->
+    <test started-at="2021-12-01T04:38:57Z" name="Delete Portfolio Test" finished-at="2021-12-01T04:39:03Z" duration-ms="6743">
+      <class name="suites.Sessions">
+        <test-method is-config="true" signature="startTest(org.testng.ITestContext)[pri:0, instance:suites.Sessions@247d8ae]" started-at="2021-12-01T04:38:57Z" name="startTest" finished-at="2021-12-01T04:38:57Z" duration-ms="5" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@3fd05b3e]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startTest -->
+        <test-method signature="login()[pri:0, instance:suites.Sessions@247d8ae]" started-at="2021-12-01T04:38:57Z" name="login" finished-at="2021-12-01T04:39:03Z" duration-ms="6330" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[The following asserts failed:
+title not mached]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: The following asserts failed:
+title not mached
+at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:43)
+at keywords.GenericKeywords.assertAll(GenericKeywords.java:175)
+at suites.Sessions.login(Sessions.java:21)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method is-config="true" signature="startMethod(org.testng.ITestContext)[pri:0, instance:suites.Sessions@247d8ae]" started-at="2021-12-01T04:38:57Z" name="startMethod" finished-at="2021-12-01T04:38:57Z" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@3fd05b3e]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startMethod -->
+        <test-method is-config="true" signature="quit()[pri:0, instance:suites.Sessions@247d8ae]" started-at="2021-12-01T04:39:03Z" name="quit" finished-at="2021-12-01T04:39:03Z" duration-ms="385" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quit -->
+      </class> <!-- suites.Sessions -->
+      <class name="suites.PortfolioManagement">
+        <test-method is-config="true" signature="startMethod(org.testng.ITestContext)[pri:0, instance:suites.PortfolioManagement@48974e45]" started-at="2021-12-01T04:39:03Z" name="startMethod" finished-at="2021-12-01T04:39:03Z" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@3fd05b3e]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startMethod -->
+        <test-method signature="deletePortfolio()[pri:0, instance:suites.PortfolioManagement@48974e45]" started-at="2021-12-01T04:39:03Z" name="deletePortfolio" finished-at="2021-12-01T04:39:03Z" duration-ms="6" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deletePortfolio -->
+      </class> <!-- suites.PortfolioManagement -->
+    </test> <!-- Delete Portfolio Test -->
+  </suite> <!-- PortfilioSuite -->
 </testng-results>

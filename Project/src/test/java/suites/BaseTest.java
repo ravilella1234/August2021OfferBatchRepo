@@ -50,6 +50,7 @@ public class BaseTest
 	@AfterTest
 	public void quit()
 	{
+		System.out.println("After execution flush");
 		if(rep!=null)
 			rep.flush();
 	}

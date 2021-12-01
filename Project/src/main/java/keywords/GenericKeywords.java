@@ -10,6 +10,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.asserts.SoftAssert;
 
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
@@ -24,6 +25,7 @@ public class GenericKeywords
 	Properties orProp;
 	public static String projectPath = System.getProperty("user.dir");
 	public ExtentTest test;
+	public SoftAssert softAssert;
 	
 	public void openBrowser(String browserName)
 	{
@@ -83,12 +85,17 @@ public class GenericKeywords
 		WebElement element = null;
 		
 		//check for element present
-		if(!isElementPresent(locatorKey))
+		if(!isElementVisible(locatorKey))
+		{
 			//report failure
-			System.out.println("Element not found :" + locatorKey);
-		
-		element = driver.findElement(getLocator(locatorKey));
-		
+			System.out.println("Element not visible :" + locatorKey);
+			reportFailure("Element not visible :" + locatorKey);
+		}
+		else
+		{
+			element = driver.findElement(getLocator(locatorKey));
+		}
+			
 		return element;
 	}
 
@@ -100,6 +107,24 @@ public class GenericKeywords
 		try 
 		{
 			wait.until(ExpectedConditions.presenceOfElementLocated(getLocator(locatorKey)));
+		} 
+		catch (Exception e) 
+		{
+			return false;
+		}
+		
+		return true;
+	}
+	
+	
+	public  boolean isElementVisible(String locatorKey) 
+	{
+		System.out.println("Check for Element Visible ");
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+		
+		try 
+		{
+			wait.until(ExpectedConditions.visibilityOfElementLocated(getLocator(locatorKey)));
 		} 
 		catch (Exception e) 
 		{
@@ -136,6 +161,18 @@ public class GenericKeywords
 	public void log(String msg)
 	{
 		test.log(Status.INFO, msg);
+	}
+	
+	public void reportFailure(String failureMsg)
+	{
+		//System.out.println(failureMsg);
+		test.log(Status.FAIL, failureMsg); // faliure in extent reports
+		softAssert.fail(failureMsg); // failure in TestNG Reports
+	}
+	
+	public void assertAll()
+	{
+		softAssert.assertAll();
 	}
 
 }

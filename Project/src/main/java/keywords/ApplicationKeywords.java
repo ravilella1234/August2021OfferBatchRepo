@@ -4,6 +4,8 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.util.Properties;
 
+import org.testng.asserts.SoftAssert;
+
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 
@@ -36,7 +38,7 @@ public class ApplicationKeywords  extends ValidationKeywords
 		{
 			e.printStackTrace();
 		}
-		
+		softAssert = new SoftAssert();
 	}
 
 	public void login()

@@ -26,6 +26,8 @@ public class AssertsDemo
 	  
 	 // Assert.assertTrue(actualtitle.equals(extecpedtitle), "Both titles are not equal...");
 	  
+	  
+	  
 	  SoftAssert obj = new SoftAssert();
 	  //obj.assertEquals(actualtitle, extecpedtitle);
 	  obj.assertTrue(actualtitle.equals(extecpedtitle), "Both titles are not equal...");
