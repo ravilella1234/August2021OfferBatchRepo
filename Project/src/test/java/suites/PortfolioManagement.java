@@ -12,6 +12,7 @@ public class PortfolioManagement extends BaseTest
   {
 	  System.out.println("creating the Portfolio");
 	  test.log(Status.INFO, "creating the Portfolio");
+	  app.reportFailure("Wrong Test", false);
   }
   
   @Test

@@ -11,6 +11,14 @@
           <include name="startMethod"/>
         </methods>
       </class> <!-- suites.Sessions -->
+      <class name="suites.PortfolioManagement">
+        <methods>
+          <include name="quit"/>
+          <include name="createPortfolio"/>
+          <include name="startTest"/>
+          <include name="startMethod"/>
+        </methods>
+      </class> <!-- suites.PortfolioManagement -->
     </classes>
   </test> <!-- Create Portfolio Test(failed) -->
   <test thread-count="5" name="Delete Portfolio Test(failed)">
@@ -23,6 +31,14 @@
           <include name="startMethod"/>
         </methods>
       </class> <!-- suites.Sessions -->
+      <class name="suites.PortfolioManagement">
+        <methods>
+          <include name="quit"/>
+          <include name="startTest"/>
+          <include name="deletePortfolio"/>
+          <include name="startMethod"/>
+        </methods>
+      </class> <!-- suites.PortfolioManagement -->
     </classes>
   </test> <!-- Delete Portfolio Test(failed) -->
 </suite> <!-- Failed suite [PortfilioSuite] -->

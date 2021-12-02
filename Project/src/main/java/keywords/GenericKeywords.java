@@ -10,6 +10,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Reporter;
 import org.testng.asserts.SoftAssert;
 
 import com.aventstack.extentreports.ExtentTest;
@@ -89,7 +90,7 @@ public class GenericKeywords
 		{
 			//report failure
 			System.out.println("Element not visible :" + locatorKey);
-			reportFailure("Element not visible :" + locatorKey);
+			reportFailure("Element not visible :" + locatorKey,true);
 		}
 		else
 		{
@@ -163,15 +164,19 @@ public class GenericKeywords
 		test.log(Status.INFO, msg);
 	}
 	
-	public void reportFailure(String failureMsg)
+	public void reportFailure(String failureMsg,boolean stopOnFailure)
 	{
 		//System.out.println(failureMsg);
 		test.log(Status.FAIL, failureMsg); // faliure in extent reports
 		softAssert.fail(failureMsg); // failure in TestNG Reports
+		
+		if(stopOnFailure)
+			assertAll(); // report all the failures (criticals /non-criticals)
 	}
 	
 	public void assertAll()
 	{
+		Reporter.getCurrentTestResult().getTestContext().setAttribute("criticalFailure", "Y");
 		softAssert.assertAll();
 	}
 

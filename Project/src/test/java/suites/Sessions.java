@@ -2,8 +2,6 @@ package suites;
 
 import org.testng.annotations.Test;
 
-import com.aventstack.extentreports.Status;
-
 public class Sessions extends BaseTest
 {
   @Test
@@ -14,10 +12,11 @@ public class Sessions extends BaseTest
 	  app.log("Do Login");
 	  app.openBrowser("chrome");
 	  app.navigate("rediffurl");
-	  app.reportFailure("title not mached");
+	  app.reportFailure("title not mached",false);
 	  app.type("userid_id", "rediffuser");
 	  //failure message
 	  app.type("userpassword_id", "rediffpassword");
+	  app.click("submitbutton_id");
 	  app.assertAll();
   }
   
