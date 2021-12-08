@@ -12,6 +12,7 @@ import com.aventstack.extentreports.Status;
 
 import keywords.ApplicationKeywords;
 import reports.ExtentManager;
+import reports.ExtentManager1;
 
 public class BaseTest 
 {
@@ -29,7 +30,7 @@ public class BaseTest
 		context.setAttribute("app", app);
 		
 		//init the reporting for the test
-		rep = ExtentManager.getReports();
+		rep = ExtentManager1.getReports();
 		test = rep.createTest(context.getCurrentXmlTest().getName());
 		test.log(Status.INFO, "Starting test :" + context.getCurrentXmlTest().getName());
 		

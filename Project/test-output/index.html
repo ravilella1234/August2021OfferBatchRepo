@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -54,7 +54,7 @@
                 </li>
                 <li>
                   <a href="#" panel-name="testlist-PortfilioSuite" class="navigator-link ">
-                    <span class="test-stats">2 tests</span>
+                    <span class="test-stats">1 test</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -91,7 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">4 methods, 2 failed,  2 skipped,  </span>
+                    <span class="method-stats">2 methods, 1 failed,  1 skipped,  </span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -100,11 +100,6 @@
                       <a href="#" panel-name="suite-PortfilioSuite" class="show-methods failed suite-PortfilioSuite"> (show)</a> <!-- show-methods failed suite-PortfilioSuite -->
                     </span>
                     <div class="method-list-content failed suite-PortfilioSuite">
-                      <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-PortfilioSuite" title="suites.Sessions" class="method navigator-link" hash-for-method="login">login</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
                       <span>
                         <img src="failed.png" width="3%"/>
                         <a href="#" panel-name="suite-PortfilioSuite" title="suites.Sessions" class="method navigator-link" hash-for-method="login">login</a> <!-- method navigator-link -->
@@ -122,11 +117,6 @@
                       <span>
                         <img src="skipped.png" width="3%"/>
                         <a href="#" panel-name="suite-PortfilioSuite" title="suites.PortfolioManagement" class="method navigator-link" hash-for-method="createPortfolio">createPortfolio</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="skipped.png" width="3%"/>
-                        <a href="#" panel-name="suite-PortfilioSuite" title="suites.PortfolioManagement" class="method navigator-link" hash-for-method="deletePortfolio">deletePortfolio</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content skipped suite-PortfilioSuite -->
@@ -154,20 +144,7 @@
                   <span class="method-name">login</span>
                   <div class="stack-trace">java.lang.AssertionError: The following asserts failed:
 	title not mached
-	at keywords.GenericKeywords.assertAll(GenericKeywords.java:180)
-	at suites.Sessions.login(Sessions.java:20)
-... Removed 26 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="login">
-                  </a> <!-- login -->
-                  <span class="method-name">login</span>
-                  <div class="stack-trace">java.lang.AssertionError: The following asserts failed:
-	title not mached
-	at keywords.GenericKeywords.assertAll(GenericKeywords.java:180)
+	at keywords.GenericKeywords.assertAll(GenericKeywords.java:206)
 	at suites.Sessions.login(Sessions.java:20)
 ... Removed 26 stack frames
 </div> <!-- stack-trace -->
@@ -187,18 +164,7 @@
                   </a> <!-- createPortfolio -->
                   <span class="method-name">createPortfolio</span>
                   <div class="stack-trace">org.testng.SkipException: Critical Faliure in Privious Tests
-	at suites.BaseTest.startMethod(BaseTest.java:52)
-... Removed 28 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="deletePortfolio">
-                  </a> <!-- deletePortfolio -->
-                  <span class="method-name">deletePortfolio</span>
-                  <div class="stack-trace">org.testng.SkipException: Critical Faliure in Privious Tests
-	at suites.BaseTest.startMethod(BaseTest.java:52)
+	at suites.BaseTest.startMethod(BaseTest.java:53)
 ... Removed 28 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
@@ -229,20 +195,6 @@
       &lt;/class&gt; &lt;!-- suites.PortfolioManagement --&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Create Portfolio Test --&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;Delete Portfolio Test&quot;&gt;
-    &lt;classes&gt;
-      &lt;class name=&quot;suites.Sessions&quot;&gt;
-        &lt;methods&gt;
-          &lt;include name=&quot;login&quot;/&gt;
-        &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- suites.Sessions --&gt;
-      &lt;class name=&quot;suites.PortfolioManagement&quot;&gt;
-        &lt;methods&gt;
-          &lt;include name=&quot;deletePortfolio&quot;/&gt;
-        &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- suites.PortfolioManagement --&gt;
-    &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Delete Portfolio Test --&gt;
 &lt;/suite&gt; &lt;!-- PortfilioSuite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -255,9 +207,6 @@
             <ul>
               <li>
                 <span class="test-name">Create Portfolio Test (2 classes)</span>
-              </li>
-              <li>
-                <span class="test-name">Delete Portfolio Test (2 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -283,28 +232,20 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(4);
+data.addRows(2);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'login')
 data.setCell(0, 2, 'suites.Sessions')
-data.setCell(0, 3, 10289);
+data.setCell(0, 3, 10809);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'login')
-data.setCell(1, 2, 'suites.Sessions')
-data.setCell(1, 3, 9188);
-data.setCell(2, 0, 2)
-data.setCell(2, 1, 'createPortfolio')
-data.setCell(2, 2, 'suites.PortfolioManagement')
-data.setCell(2, 3, 0);
-data.setCell(3, 0, 3)
-data.setCell(3, 1, 'deletePortfolio')
-data.setCell(3, 2, 'suites.PortfolioManagement')
-data.setCell(3, 3, 0);
+data.setCell(1, 1, 'createPortfolio')
+data.setCell(1, 2, 'suites.PortfolioManagement')
+data.setCell(1, 3, 0);
 window.suiteTableData['PortfilioSuite']= { tableData: data, tableDiv: 'times-div-PortfilioSuite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 19 seconds</span>
+              <span class="suite-total-time">Total running time: 10 seconds</span>
               <div id="times-div-PortfilioSuite">
               </div> <!-- times-div-PortfilioSuite -->
             </div> <!-- times-div -->
@@ -319,14 +260,12 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-PortfilioSuite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">8 ignored methods</span>
+            <span class="header-content">4 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
               <span class="ignored-class-name">suites.Sessions</span>
               <div class="ignored-methods-div">
-                <span class="ignored-method-name">logout</span>
-                <br/>
                 <span class="ignored-method-name">logout</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
@@ -335,12 +274,6 @@ return data;
               <span class="ignored-class-name">suites.PortfolioManagement</span>
               <div class="ignored-methods-div">
                 <span class="ignored-method-name">quit</span>
-                <br/>
-                <span class="ignored-method-name">quit</span>
-                <br/>
-                <span class="ignored-method-name">createPortfolio</span>
-                <br/>
-                <span class="ignored-method-name">startTest</span>
                 <br/>
                 <span class="ignored-method-name">startTest</span>
                 <br/>
@@ -356,74 +289,42 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
+              <div class="chronological-class-name">suites.Sessions</div> <!-- chronological-class-name -->
+              <div class="configuration-test before">
+                <span class="method-name">startTest(org.testng.TestRunner@4d41ba0f)</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-test before -->
+              <div class="configuration-method before">
+                <span class="method-name">startMethod(org.testng.TestRunner@4d41ba0f)</span>
+                <span class="method-start">905 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">login</span>
+                <span class="method-start">906 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">suites.PortfolioManagement</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">startMethod(org.testng.TestRunner@4d41ba0f)</span>
+                <span class="method-start">11730 ms</span>
+              </div> <!-- configuration-method before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">suites.Sessions</div> <!-- chronological-class-name -->
+              <div class="configuration-test after">
+                <span class="method-name">quit</span>
+                <span class="method-start">11743 ms</span>
+              </div> <!-- configuration-test after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
               <div class="chronological-class-name">suites.PortfolioManagement</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">createPortfolio</span>
-                <span class="method-start">0 ms</span>
+                <span class="method-start">-1638937686144 ms</span>
               </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">deletePortfolio</span>
-                <span class="method-start">0 ms</span>
-              </div> <!-- test-method -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">suites.Sessions</div> <!-- chronological-class-name -->
-              <div class="configuration-test before">
-                <span class="method-name">startTest(org.testng.TestRunner@15400fff)</span>
-                <span class="method-start">0 ms</span>
-              </div> <!-- configuration-test before -->
-              <div class="configuration-method before">
-                <span class="method-name">startMethod(org.testng.TestRunner@15400fff)</span>
-                <span class="method-start">870 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">login</span>
-                <span class="method-start">871 ms</span>
-              </div> <!-- test-method -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">suites.PortfolioManagement</div> <!-- chronological-class-name -->
-              <div class="configuration-method before">
-                <span class="method-name">startMethod(org.testng.TestRunner@15400fff)</span>
-                <span class="method-start">11170 ms</span>
-              </div> <!-- configuration-method before -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">suites.Sessions</div> <!-- chronological-class-name -->
-              <div class="configuration-test after">
-                <span class="method-name">quit</span>
-                <span class="method-start">11188 ms</span>
-              </div> <!-- configuration-test after -->
-              <div class="configuration-test before">
-                <span class="method-name">startTest(org.testng.TestRunner@7d17ee50)</span>
-                <span class="method-start">12821 ms</span>
-              </div> <!-- configuration-test before -->
-              <div class="configuration-method before">
-                <span class="method-name">startMethod(org.testng.TestRunner@7d17ee50)</span>
-                <span class="method-start">12830 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">login</span>
-                <span class="method-start">12830 ms</span>
-              </div> <!-- test-method -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">suites.PortfolioManagement</div> <!-- chronological-class-name -->
-              <div class="configuration-method before">
-                <span class="method-name">startMethod(org.testng.TestRunner@7d17ee50)</span>
-                <span class="method-start">22022 ms</span>
-              </div> <!-- configuration-method before -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">suites.Sessions</div> <!-- chronological-class-name -->
-              <div class="configuration-test after">
-                <span class="method-name">quit</span>
-                <span class="method-start">22031 ms</span>
-              </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

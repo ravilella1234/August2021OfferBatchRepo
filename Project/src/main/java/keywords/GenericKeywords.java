@@ -1,9 +1,14 @@
 package keywords;
 
+import java.io.File;
 import java.time.Duration;
+import java.util.Date;
 import java.util.Properties;
 
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -17,6 +22,7 @@ import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import reports.ExtentManager1;
 
 public class GenericKeywords
 {
@@ -168,12 +174,32 @@ public class GenericKeywords
 	{
 		//System.out.println(failureMsg);
 		test.log(Status.FAIL, failureMsg); // faliure in extent reports
+		takeScreenShot();
 		softAssert.fail(failureMsg); // failure in TestNG Reports
 		
 		if(stopOnFailure)
 			assertAll(); // report all the failures (criticals /non-criticals)
 	}
 	
+	public void takeScreenShot() 
+	{
+		Date d = new Date();
+		String screenshotFileName = d.toString().replace(':','_').replace(' ','_')+".png";
+		
+		//Take the scrrenshot
+		File srcFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+		try
+		{
+			FileUtils.copyFile(srcFile, new File(ExtentManager1.screenshotFolderPath+"//"+screenshotFileName));
+			test.log(Status.INFO, "Screenshot -->"+ test.addScreenCaptureFromPath(ExtentManager1.screenshotFolderPath+"//"+screenshotFileName));
+		}
+		catch (Exception e) 
+		{
+			e.printStackTrace();
+		}
+		
+	}
+
 	public void assertAll()
 	{
 		Reporter.getCurrentTestResult().getTestContext().setAttribute("criticalFailure", "Y");
